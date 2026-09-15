@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bithash"
+version = "0.1.0"
+description = "Hash-collision weight quantization: 16-entry shared codebook, 4-bit codes, exact per-row least-squares scales"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0", "numpy"]
+license = "MIT"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+viz = ["matplotlib"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["bithash"]
+
+[tool.ruff]
+line-length = 100

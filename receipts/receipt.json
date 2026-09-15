@@ -1,0 +1,18 @@
+{
+  "shape": [
+    256,
+    2048
+  ],
+  "bits_per_weight_effective": 4.016,
+  "compression_vs_fp16": 3.98,
+  "reconstruction_rel_err_grid": {
+    "uniform16/absmax": 0.1309,
+    "uniform16/ls": 0.1298,
+    "odd16/absmax": 0.1393,
+    "odd16/ls": 0.1378
+  },
+  "findings": [
+    "LS scale always beats absmax on identical codes (by construction)",
+    "uniform16 (with zero) beats odd16 (no-zero) on dense rows: near-zero weights are the mode"
+  ]
+}
